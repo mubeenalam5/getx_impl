@@ -51,14 +51,18 @@ class ShoppingScr extends StatelessWidget {
                                   ],
                                 ),
                                 Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
                                   children: [
-                                    RaisedButton(
+                                    ElevatedButton(
                                       onPressed: () {
                                         cartController.addToCart(
                                             controller.products[index]);
                                       },
-                                      color: Colors.blue,
-                                      textColor: Colors.white,
+                                      style: ElevatedButton.styleFrom(
+                                          primary: Colors.blue,
+                                          textStyle:
+                                              TextStyle(color: Colors.white)),
                                       child: Text('Add to Cart'),
                                     ),
                                     RaisedButton(
